@@ -31,7 +31,7 @@ layout = html.Div(
         dbc.Stack(
             [
                 html.Div(
-                    [html.Img(src=r"/assets/logos/ansys-solutions-horizontal-logo.png", style={"width": "80%"})],
+                    [html.Img(src=r"/assets/logos/SlimeAI.png", style={"width": "50%"})],
                 ),
                 html.Div(
                     [
