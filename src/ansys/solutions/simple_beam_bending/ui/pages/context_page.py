@@ -22,7 +22,7 @@ def layout(step: ContextStep):
     return html.Div(
         dbc.Container(
             [
-                html.H1("Parabolic Reflector - Bezel Check TESTING THE GIT", className="display-3", style={"font-size": "35px"}),
+                html.H1("Parabolic Reflector - Bezel Check TESTING THE GIT AGAIN", className="display-3", style={"font-size": "35px"}),
 
                 html.Hr(className="my-2"),
                 dbc.Row(
