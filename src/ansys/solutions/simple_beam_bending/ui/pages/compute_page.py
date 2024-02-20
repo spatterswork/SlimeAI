@@ -28,15 +28,23 @@ def layout(step: ComputeStep):
 
             html.Hr(className="my-2"),
             html.Br(),
+           
             dbc.Row(
                 [
                     dbc.Col(
                         [
 
-                            dcc.Upload(html.Button('Upload File')),
+                            dcc.Upload(
+                                html.Button('Upload STL File'),
+                                id='upload_button',
+                                accept='.STL',
+                                disable_click=False
+                                ),
+                            
+                                
 
                             html.Br(),
-                            html.Div(
+                            html.Div([
                                 
                                 dbc.Button(
                                     "Compute",
@@ -52,8 +60,33 @@ def layout(step: ComputeStep):
                                         "height": "30px",
                                     },
                                 ),
+
+                                dbc.Button(
+                                    "TESTING",
+                                    id="testing",
+                                    disabled=False
+                                ),
+
+                                dbc.Textarea(
+                                    id='TextArea_example',
+                                    value='upload_button',
+                                    disabled='True',
+                                    placeholder='Path to STL File',
+                                    readOnly=True,
+                                    draggable='false',
+                                    style={
+                                        'width': '100%'
+                                    },
+                                ),
+
+                            ],
+
+
                                 className="d-grid gap-2 col-5 mx-auto",
+                            
                             ),
+                                
+                                
                         ],
                         width=6,
                     ),
@@ -93,6 +126,10 @@ def layout(step: ComputeStep):
             ),
         ]
     )
+
+
+
+
 
 
 @callback(
