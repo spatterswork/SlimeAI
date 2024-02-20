@@ -19,5 +19,5 @@ class Steps(StepsModel):
 class Simple_Beam_BendingSolution(Solution):
     """Solution definition."""
 
-    display_name: str = "Simple Beam Bending"
+    display_name: str = "Optimal Beam Parabola Generator"
     steps: Steps
